@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serenity Spa | Find Your Moment of Serenity</title>
+  <meta name="description" content="Serenity Spa: luxury wellness and spa in Pimpri Chinchwad. Massage, facials, aromatherapy and body treatments designed around you.">
+  <meta name="theme-color" content="#F8F7F2">
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/images/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/main.js" defer></script>
+  <script src="js/booking.js" defer></script>
+  <script src="js/components.js" defer></script>
+</head>
+<body>
+
+  <!-- Header is loaded from components/header.html by js/components.js -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- A. HERO (3 auto-changing banners) -->
+    <section id="home" class="hero relative overflow-hidden" aria-roledescription="carousel" aria-label="Serenity Spa highlights" data-hero>
+      <div class="hero-track">
+      <div class="hero-slide is-active" role="group" aria-roledescription="slide" aria-label="Banner 1 of 3" data-hero-slide>
+        <div class="img-frame absolute inset-0">
+          <img src="assets/images/spa-hero.jpg" alt="Sunset over an infinity pool with palm trees and sun loungers at a wellness retreat" class="hero-media" fetchpriority="high">
+        </div>
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="wrap hero-content">
+          <div class="max-w-2xl text-white">
+            <p class="eyebrow eyebrow-light hero-anim hero-anim-1">YOUR SPACE TO UNWIND</p>
+            <h1 class="hero-title hero-anim hero-anim-2">Find Your Moment of Serenity</h1>
+            <p class="hero-lead hero-anim hero-anim-3">Escape the everyday, reconnect with yourself, and experience wellness designed around you.</p>
+            <div class="mt-7 flex flex-col gap-3 sm:flex-row hero-anim hero-anim-4">
+              <a href="#treatments" class="btn btn-outline-light">Explore Treatments</a>
+              <a href="#booking" class="btn btn-gold">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="Banner 2 of 3" data-hero-slide>
+        <div class="img-frame absolute inset-0">
+          <img src="assets/images/spa-hero-2.jpg" alt="Peaceful spa lounge with arched windows, hanging greenery and rows of white loungers" class="hero-media">
+        </div>
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="wrap hero-content">
+          <div class="max-w-2xl text-white">
+            <p class="eyebrow eyebrow-light hero-anim hero-anim-1">PEACEFUL SPACES</p>
+            <h2 class="hero-title hero-anim hero-anim-2">Rest in Spaces Made for Calm</h2>
+            <p class="hero-lead hero-anim hero-anim-3">Soft light, natural textures and quiet corners that help you slow down and breathe.</p>
+            <div class="mt-7 flex flex-col gap-3 sm:flex-row hero-anim hero-anim-4">
+              <a href="#treatments" class="btn btn-outline-light">Explore Treatments</a>
+              <a href="#booking" class="btn btn-gold">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="Banner 3 of 3" data-hero-slide>
+        <div class="img-frame absolute inset-0">
+          <img src="assets/images/spa-hero-3.jpg" alt="Therapist's hands giving a relaxing oil massage with candles glowing in the background" class="hero-media">
+        </div>
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="wrap hero-content">
+          <div class="max-w-2xl text-white">
+            <p class="eyebrow eyebrow-light hero-anim hero-anim-1">PERSONALISED CARE</p>
+            <h2 class="hero-title hero-anim hero-anim-2">Care That Feels Made for You</h2>
+            <p class="hero-lead hero-anim hero-anim-3">Gentle hands and thoughtful treatments, shaped around what your body and mind need most.</p>
+            <div class="mt-7 flex flex-col gap-3 sm:flex-row hero-anim hero-anim-4">
+              <a href="#treatments" class="btn btn-outline-light">Explore Treatments</a>
+              <a href="#booking" class="btn btn-gold">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="hero-controls">
+        <div class="wrap flex items-center justify-between">
+          <div class="flex items-center" role="group" aria-label="Choose a banner">
+            <button type="button" class="hero-dot is-active" data-hero-dot aria-label="Show banner 1" aria-current="true"></button>
+            <button type="button" class="hero-dot" data-hero-dot aria-label="Show banner 2"></button>
+            <button type="button" class="hero-dot" data-hero-dot aria-label="Show banner 3"></button>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" class="hero-arrow" data-hero-prev aria-label="Previous banner"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+            <button type="button" class="hero-arrow" data-hero-next aria-label="Next banner"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C. ABOUT -->
+    <section id="about" class="section bg-white">
+      <div class="wrap grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
+        <div class="img-accent reveal">
+          <div class="img-frame img-zoom aspect-[4/3] rounded-sm">
+            <img src="assets/images/spa-about.jpg" alt="Therapist giving a gentle facial massage to a relaxed guest in a bright, airy spa room" loading="lazy">
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <p class="eyebrow">About Serenity</p>
+          <h2 class="section-title">Where Wellness Meets Tranquility</h2>
+          <div class="prose-spa mt-4">
+            <p>Serenity Spa was imagined as a quiet pause in a busy world. Every detail, from the soft light to the scent of fresh botanicals, is chosen to help you slow down and breathe.</p>
+            <p>No two guests are the same, so no two experiences are either. Each visit begins with a conversation about how you feel, and your treatment is shaped around what your body and mind need most, in peaceful surroundings that invite mindful self-care.</p>
+          </div>
+
+          <ul class="mt-5 grid gap-4 sm:grid-cols-3">
+            <li class="feature-row flex items-start gap-3 sm:flex-col">
+              <span class="icon-badge"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span>
+              <span class="font-display text-lg font-semibold leading-tight">Personalised Treatments</span>
+            </li>
+            <li class="feature-row flex items-start gap-3 sm:flex-col">
+              <span class="icon-badge"><i class="fa-solid fa-wind" aria-hidden="true"></i></span>
+              <span class="font-display text-lg font-semibold leading-tight">Peaceful Ambience</span>
+            </li>
+            <li class="feature-row flex items-start gap-3 sm:flex-col">
+              <span class="icon-badge"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></span>
+              <span class="font-display text-lg font-semibold leading-tight">Thoughtful Care</span>
+            </li>
+          </ul>
+
+          <a href="#experience" class="btn btn-olive mt-6">Discover Our Philosophy</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- D. TREATMENTS -->
+    <section id="treatments" class="section bg-ivory">
+      <div class="wrap">
+        <div class="section-head-center reveal">
+          <p class="eyebrow">Our Treatments</p>
+          <h2 class="section-title">Treatments Designed for You</h2>
+          <p class="section-lead">Discover experiences that help you pause, relax, and restore.</p>
+        </div>
+
+        <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="card card-accent reveal">
+            <div class="card-media img-frame aspect-[4/3]">
+              <img src="assets/images/massage.jpg" alt="Guest receiving a calming head massage on a spa bed with white towels" loading="lazy">
+              <span class="chip"><i class="fa-regular fa-clock" aria-hidden="true"></i>60 minutes</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <h3 class="card-title">Relaxation Massage</h3>
+              <p class="mt-3 flex-1 text-sm text-olive-soft">Slow, flowing strokes ease tension from head to toe, leaving you deeply calm and unhurried.</p>
+              <p class="price mt-5">₹1,499<span class="price-note">Sample price</span></p>
+              <button type="button" class="btn btn-outline-olive btn-block mt-5" data-book-select="relaxation-massage">Enquire Now <i class="fa-solid fa-arrow-right btn-arrow" aria-hidden="true"></i></button>
+            </div>
+          </article>
+          <article class="card card-accent reveal reveal-delay-1">
+            <div class="card-media img-frame aspect-[4/3]">
+              <img src="assets/images/facial.jpg" alt="Guest relaxing with a creamy face mask and a white towel wrap beside folded towels and bamboo leaves" loading="lazy">
+              <span class="chip"><i class="fa-regular fa-clock" aria-hidden="true"></i>45 minutes</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <h3 class="card-title">Signature Facial</h3>
+              <p class="mt-3 flex-1 text-sm text-olive-soft">A gentle cleanse, mask and massage that refreshes the skin and brings back a natural glow.</p>
+              <p class="price mt-5">₹1,199<span class="price-note">Sample price</span></p>
+              <button type="button" class="btn btn-outline-olive btn-block mt-5" data-book-select="signature-facial">Enquire Now <i class="fa-solid fa-arrow-right btn-arrow" aria-hidden="true"></i></button>
+            </div>
+          </article>
+          <article class="card card-accent reveal reveal-delay-2">
+            <div class="card-media img-frame aspect-[4/3]">
+              <img src="assets/images/aromatherapy.jpg" alt="Amber essential oil bottles with lavender and dried herbs in a wooden bowl" loading="lazy">
+              <span class="chip"><i class="fa-regular fa-clock" aria-hidden="true"></i>60 minutes</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <h3 class="card-title">Aromatherapy</h3>
+              <p class="mt-3 flex-1 text-sm text-olive-soft">Pure essential oils, chosen for your mood, guide you into a state of quiet balance.</p>
+              <p class="price mt-5">₹1,699<span class="price-note">Sample price</span></p>
+              <button type="button" class="btn btn-outline-olive btn-block mt-5" data-book-select="aromatherapy">Enquire Now <i class="fa-solid fa-arrow-right btn-arrow" aria-hidden="true"></i></button>
+            </div>
+          </article>
+          <article class="card card-accent reveal reveal-delay-3">
+            <div class="card-media img-frame aspect-[4/3]">
+              <img src="assets/images/body-treatment.jpg" alt="Therapist's hands giving an oil massage with softly glowing candles behind" loading="lazy">
+              <span class="chip"><i class="fa-regular fa-clock" aria-hidden="true"></i>75 minutes</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <h3 class="card-title">Body Renewal Treatment</h3>
+              <p class="mt-3 flex-1 text-sm text-olive-soft">A nourishing, candlelit ritual that soothes tired muscles and leaves skin soft and refreshed.</p>
+              <p class="price mt-5">₹1,999<span class="price-note">Sample price</span></p>
+              <button type="button" class="btn btn-outline-olive btn-block mt-5" data-book-select="body-renewal">Enquire Now <i class="fa-solid fa-arrow-right btn-arrow" aria-hidden="true"></i></button>
+            </div>
+          </article>
+        </div>
+
+        <p class="mt-5 text-center text-xs text-olive-soft">All prices shown are illustrative sample content.</p>
+      </div>
+    </section>
+
+    <!-- E. EXPERIENCE -->
+    <section id="experience" class="section bg-beige-soft">
+      <div class="wrap grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
+        <div class="reveal">
+          <p class="eyebrow">The Spa Experience</p>
+          <h2 class="section-title">More Than a Treatment. A Feeling.</h2>
+          <p class="section-lead">From the moment you arrive, every space is designed to quiet the mind and soften the pace of your day.</p>
+
+          <ul class="mt-6 space-y-4">
+            <li class="feature-row flex gap-4">
+              <span class="icon-badge"><i class="fa-solid fa-bed" aria-hidden="true"></i></span>
+              <div>
+                <h3 class="font-display text-xl font-semibold leading-tight">Relaxing Treatment Rooms</h3>
+                <p class="mt-1 text-sm text-olive-soft">Private rooms with soft lighting, gentle warmth and calming scents.</p>
+              </div>
+            </li>
+            <li class="feature-row flex gap-4">
+              <span class="icon-badge"><i class="fa-solid fa-spa" aria-hidden="true"></i></span>
+              <div>
+                <h3 class="font-display text-xl font-semibold leading-tight">Peaceful Interiors</h3>
+                <p class="mt-1 text-sm text-olive-soft">Natural textures, muted tones and open space that let you exhale.</p>
+              </div>
+            </li>
+            <li class="feature-row flex gap-4">
+              <span class="icon-badge"><i class="fa-solid fa-couch" aria-hidden="true"></i></span>
+              <div>
+                <h3 class="font-display text-xl font-semibold leading-tight">Thoughtfully Designed Relaxation Spaces</h3>
+                <p class="mt-1 text-sm text-olive-soft">Quiet corners to unwind with a warm cup of herbal tea before and after your treatment.</p>
+              </div>
+            </li>
+            <li class="feature-row flex gap-4">
+              <span class="icon-badge"><i class="fa-solid fa-heart" aria-hidden="true"></i></span>
+              <div>
+                <h3 class="font-display text-xl font-semibold leading-tight">A Welcoming Guest Experience</h3>
+                <p class="mt-1 text-sm text-olive-soft">Attentive, unhurried care from the first greeting to the last goodbye.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="img-accent reveal reveal-delay-1 lg:order-first">
+          <div class="img-frame img-zoom aspect-[3/2] rounded-sm">
+            <img src="assets/images/spa-interior.jpg" alt="Peaceful spa lounge with arched windows, hanging greenery and rows of white loungers" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- F. PACKAGES -->
+    <section id="packages" class="section bg-ivory">
+      <div class="wrap">
+        <div class="section-head-center reveal">
+          <p class="eyebrow">Wellness Packages</p>
+          <h2 class="section-title">Your Personal Wellness Ritual</h2>
+          <p class="section-lead">Thoughtfully combined experiences for deeper rest. All prices are sample prices.</p>
+        </div>
+
+        <div class="mt-6 grid items-stretch gap-5 lg:grid-cols-3 lg:gap-6">
+          <article class="card card-accent package reveal p-6">
+            <div class="flex items-center justify-between">
+              <span class="icon-badge"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span>
+              
+            </div>
+            <h3 class="card-title mt-5">Relax &amp; Renew</h3>
+            <p class="mt-3 text-sm text-olive-soft">A simple, restorative hour to reset after a long week.</p>
+            <ul class="check-list mt-6 flex-1 text-sm">
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Relaxation massage</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Herbal welcome tea</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>60-minute experience</li>
+            </ul>
+            <p class="price mt-8">₹1,999<span class="price-note">Sample price</span></p>
+            <button type="button" class="btn btn-outline-olive btn-block mt-6" data-book-select="relax-renew">Enquire About This <i class="fa-solid fa-arrow-right btn-arrow" aria-hidden="true"></i></button>
+          </article>
+          <article class="card card-accent package package-featured reveal reveal-delay-1 p-6">
+            <div class="flex items-center justify-between">
+              <span class="icon-badge"><i class="fa-solid fa-spa" aria-hidden="true"></i></span>
+              <span class="badge">Featured</span>
+            </div>
+            <h3 class="card-title mt-5">Complete Serenity</h3>
+            <p class="mt-3 text-sm text-olive-soft">Body and skin cared for together, with time to linger afterwards.</p>
+            <ul class="check-list mt-6 flex-1 text-sm">
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Relaxation massage</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Signature facial</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Relaxation lounge access</li>
+            </ul>
+            <p class="price mt-8">₹3,499<span class="price-note">Sample price</span></p>
+            <button type="button" class="btn btn-olive btn-block mt-6" data-book-select="complete-serenity">Enquire About This <i class="fa-solid fa-arrow-right btn-arrow" aria-hidden="true"></i></button>
+          </article>
+          <article class="card card-accent package reveal reveal-delay-2 p-6">
+            <div class="flex items-center justify-between">
+              <span class="icon-badge"><i class="fa-solid fa-heart" aria-hidden="true"></i></span>
+              
+            </div>
+            <h3 class="card-title mt-5">Couple&rsquo;s Retreat</h3>
+            <p class="mt-3 text-sm text-olive-soft">Shared calm for two, with private time to simply be together.</p>
+            <ul class="check-list mt-6 flex-1 text-sm">
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Couple&rsquo;s relaxation experience</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Private relaxation time</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i>Herbal welcome tea</li>
+            </ul>
+            <p class="price mt-8">₹4,999<span class="price-note">Sample price</span></p>
+            <button type="button" class="btn btn-outline-olive btn-block mt-6" data-book-select="couples-retreat">Enquire About This <i class="fa-solid fa-arrow-right btn-arrow" aria-hidden="true"></i></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- G. GALLERY -->
+    <section id="gallery" class="section bg-white">
+      <div class="wrap">
+        <div class="section-head-center reveal">
+          <p class="eyebrow">Spa Gallery</p>
+          <h2 class="section-title">A Glimpse of Calm</h2>
+          <p class="section-lead">Quiet interiors, soft light and natural details. Select an image to view it larger.</p>
+        </div>
+
+        <div class="mt-6 grid auto-rows-[9rem] grid-cols-2 gap-3 sm:auto-rows-[11rem] md:grid-cols-3 md:gap-4 lg:auto-rows-[13rem]">
+          <div class="col-span-2 md:row-span-2 reveal">
+            <button type="button" class="gallery-item" data-lightbox aria-label="Open image: spa pool">
+              <span class="img-frame block">
+                <img src="assets/images/spa-pool.jpg" alt="Clear blue spa pool surrounded by palm trees and tropical greenery" loading="lazy">
+              </span>
+              <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+            </button>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <button type="button" class="gallery-item" data-lightbox aria-label="Open image: towels and botanical details">
+              <span class="img-frame block">
+                <img src="assets/images/spa-gallery-1.jpg" alt="Folded white towels with essential oil bottles, orchids, smooth stones and eucalyptus" loading="lazy">
+              </span>
+              <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+            </button>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <button type="button" class="gallery-item" data-lightbox aria-label="Open image: treatment room">
+              <span class="img-frame block">
+                <img src="assets/images/spa-gallery-2.jpg" alt="Warmly lit treatment room with a massage bed scattered with rose petals" loading="lazy">
+              </span>
+              <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+            </button>
+          </div>
+          <div class="reveal">
+            <button type="button" class="gallery-item" data-lightbox aria-label="Open image: relaxation room">
+              <span class="img-frame block">
+                <img src="assets/images/spa-gallery-3.jpg" alt="Softly lit spa room with a stone bath, plants and a quiet seating area" loading="lazy">
+              </span>
+              <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+            </button>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <button type="button" class="gallery-item" data-lightbox aria-label="Open image: sunset loungers">
+              <span class="img-frame block">
+                <img src="assets/images/spa-gallery-4.jpg" alt="Two wooden sun loungers beside an infinity pool at sunset" loading="lazy">
+              </span>
+              <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+            </button>
+          </div>
+          <div class="col-span-2 md:col-span-1 reveal reveal-delay-2">
+            <button type="button" class="gallery-item" data-lightbox aria-label="Open image: essential oils and lavender">
+              <span class="img-frame block">
+                <img src="assets/images/spa-gallery-5.jpg" alt="Amber essential oil bottles with lavender and dried botanicals on a wooden table" loading="lazy">
+              </span>
+              <span class="gallery-overlay" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- H. TESTIMONIALS -->
+    <section id="testimonials" class="section bg-ivory">
+      <div class="wrap">
+        <div class="section-head-center reveal">
+          <p class="eyebrow">Guest Words</p>
+          <h2 class="section-title">Moments of Calm, Shared by Our Guests</h2>
+          <p class="section-lead">Sample testimonials from fictional guests, not verified reviews.</p>
+        </div>
+
+        <div class="mt-6 grid gap-5 md:grid-cols-3">
+          <figure class="card testimonial reveal p-6">
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <div class="stars mt-2" role="img" aria-label="5 out of 5 stars (sample)">
+              <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <blockquote class="mt-4 flex-1 font-display text-xl leading-snug text-olive">
+              I walked in rushed and walked out feeling like time had slowed down. The calm was something I did not expect.
+            </blockquote>
+            <figcaption class="mt-4 border-t border-beige pt-3 text-sm">
+              <span class="font-semibold">Aarohi M.</span>
+              <span class="block text-xs text-olive-soft">Sample guest, Relaxation Massage</span>
+            </figcaption>
+          </figure>
+
+          <figure class="card testimonial reveal reveal-delay-1 p-6">
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <div class="stars mt-2" role="img" aria-label="5 out of 5 stars (sample)">
+              <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <blockquote class="mt-4 flex-1 font-display text-xl leading-snug text-olive">
+              The facial felt unhurried and thoughtful, and the quiet lounge afterwards made the whole visit feel complete.
+            </blockquote>
+            <figcaption class="mt-4 border-t border-beige pt-3 text-sm">
+              <span class="font-semibold">Kavya R.</span>
+              <span class="block text-xs text-olive-soft">Sample guest, Complete Serenity</span>
+            </figcaption>
+          </figure>
+
+          <figure class="card testimonial reveal reveal-delay-2 p-6">
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <div class="stars mt-2" role="img" aria-label="5 out of 5 stars (sample)">
+              <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <blockquote class="mt-4 flex-1 font-display text-xl leading-snug text-olive">
+              A quiet, beautiful afternoon for the two of us. We left relaxed and already planning to come back.
+            </blockquote>
+            <figcaption class="mt-4 border-t border-beige pt-3 text-sm">
+              <span class="font-semibold">Neil &amp; Tanvi S.</span>
+              <span class="block text-xs text-olive-soft">Sample guests, Couple&rsquo;s Retreat</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- I. BOOKING -->
+    <section id="booking" class="section bg-beige">
+      <div class="wrap grid items-stretch gap-6 lg:grid-cols-5 lg:gap-10">
+        <div class="enquiry-info reveal lg:col-span-2">
+          <p class="eyebrow">Send an Enquiry</p>
+          <h2 class="section-title">Make Time for Yourself</h2>
+          <p class="section-lead">Tell us what you are interested in and when. Your enquiry opens in WhatsApp, ready to send to us.</p>
+
+          <p id="booking-selection-note" class="mt-4 text-sm font-semibold" role="status" hidden></p>
+
+          <ol class="steps mt-5 space-y-3 text-sm">
+            <li class="flex items-start gap-3">
+              <span class="step-num" aria-hidden="true">1</span>
+              <span>Choose a treatment or package and your preferred date and time.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="step-num" aria-hidden="true">2</span>
+              <span>WhatsApp opens with your enquiry already written. Tap Send.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="step-num" aria-hidden="true">3</span>
+              <span>We reply to your message on WhatsApp.</span>
+            </li>
+          </ol>
+
+          <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+            <a href="tel:+918830532500" class="btn btn-outline-olive btn-sm"><i class="fa-solid fa-phone" aria-hidden="true"></i>+91 88305 32500</a>
+            <a href="https://wa.me/918830532500" class="btn btn-olive btn-sm" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>Chat on WhatsApp</a>
+          </div>
+
+          <div class="enquiry-photo img-frame img-zoom mt-5">
+            <img src="assets/images/spa-gallery-3.jpg" alt="Softly lit spa room with a stone bath, plants and a quiet seating area" loading="lazy">
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1 lg:col-span-3">
+          <div class="form-card">
+            <form id="booking-form" novalidate aria-describedby="booking-status">
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="booking-name" class="field-label">Full Name <span class="text-gold" aria-hidden="true">*</span></label>
+                  <input id="booking-name" name="name" type="text" class="field-input" autocomplete="name" required aria-describedby="booking-name-error">
+                  <p id="booking-name-error" class="field-error" hidden></p>
+                </div>
+
+                <div>
+                  <label for="booking-email" class="field-label">Email Address <span class="text-gold" aria-hidden="true">*</span></label>
+                  <input id="booking-email" name="email" type="email" class="field-input" autocomplete="email" required aria-describedby="booking-email-error">
+                  <p id="booking-email-error" class="field-error" hidden></p>
+                </div>
+
+                <div>
+                  <label for="booking-phone" class="field-label">Phone Number <span class="text-gold" aria-hidden="true">*</span></label>
+                  <input id="booking-phone" name="phone" type="tel" inputmode="tel" class="field-input" autocomplete="tel" placeholder="e.g. +91 98765 43210" required aria-describedby="booking-phone-error">
+                  <p id="booking-phone-error" class="field-error" hidden></p>
+                </div>
+
+                <div>
+                  <label for="booking-treatment" class="field-label">Treatment <span class="text-gold" aria-hidden="true">*</span></label>
+                  <select id="booking-treatment" name="treatment" class="field-input" required aria-describedby="booking-treatment-error">
+                    <option value="">Select a treatment or package</option>
+                    <optgroup label="Treatments">
+                      <option value="relaxation-massage">Relaxation Massage</option>
+                      <option value="signature-facial">Signature Facial</option>
+                      <option value="aromatherapy">Aromatherapy</option>
+                      <option value="body-renewal">Body Renewal Treatment</option>
+                    </optgroup>
+                    <optgroup label="Packages">
+                      <option value="relax-renew">Relax &amp; Renew</option>
+                      <option value="complete-serenity">Complete Serenity</option>
+                      <option value="couples-retreat">Couple&rsquo;s Retreat</option>
+                    </optgroup>
+                  </select>
+                  <p id="booking-treatment-error" class="field-error" hidden></p>
+                </div>
+
+                <div>
+                  <label for="booking-date" class="field-label">Preferred Date <span class="text-gold" aria-hidden="true">*</span></label>
+                  <input id="booking-date" name="date" type="date" class="field-input" required aria-describedby="booking-date-error">
+                  <p id="booking-date-error" class="field-error" hidden></p>
+                </div>
+
+                <div>
+                  <label for="booking-time" class="field-label">Preferred Time <span class="text-gold" aria-hidden="true">*</span></label>
+                  <select id="booking-time" name="time" class="field-input" required aria-describedby="booking-time-error">
+                    <option value="">Select a time</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="13:00">1:00 PM</option>
+                    <option value="14:00">2:00 PM</option>
+                    <option value="15:00">3:00 PM</option>
+                    <option value="16:00">4:00 PM</option>
+                    <option value="17:00">5:00 PM</option>
+                    <option value="18:00">6:00 PM</option>
+                    <option value="19:00">7:00 PM</option>
+                  </select>
+                  <p id="booking-time-error" class="field-error" hidden></p>
+                </div>
+
+                <div class="sm:col-span-2">
+                  <label for="booking-message" class="field-label">Message <span class="font-normal text-olive-soft">(optional)</span></label>
+                  <textarea id="booking-message" name="message" rows="4" maxlength="500" class="field-input" placeholder="Anything we should know, such as preferences or special requests."></textarea>
+                </div>
+              </div>
+
+              <p id="booking-status" class="form-status mt-6" role="alert" hidden></p>
+
+              <button type="submit" class="btn btn-olive btn-block mt-5"><i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i>Send Enquiry on WhatsApp</button>
+            </form>
+
+            <div id="booking-success" class="success-panel" tabindex="-1" role="status" hidden>
+              <span class="icon-badge"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
+              <h3 class="card-title mt-3">Your enquiry is ready</h3>
+              <p id="booking-success-message" class="mx-auto mt-2 max-w-md text-sm text-olive-soft"></p>
+              <div class="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
+                <a id="booking-whatsapp-link" href="https://wa.me/918830532500" class="btn btn-gold" target="_blank" rel="noopener noreferrer">Open WhatsApp</a>
+                <button type="button" id="booking-reset" class="btn btn-outline-olive">Make Another Enquiry</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- J. CONTACT -->
+    <section id="contact" class="section bg-white">
+      <div class="wrap">
+        <div class="section-head-center reveal">
+          <p class="eyebrow">Contact &amp; Location</p>
+          <h2 class="section-title">Visit Serenity Spa</h2>
+          <p class="section-lead">Call, message or drop in. We would love to hear from you.</p>
+        </div>
+
+        <div class="mt-6 grid gap-6 lg:grid-cols-2 lg:gap-8">
+          <div class="reveal">
+            <ul class="space-y-4">
+              <li class="feature-row flex gap-4">
+                <span class="icon-badge"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                <div>
+                  <h3 class="font-display text-xl font-semibold leading-tight">Address</h3>
+                  <a href="https://www.google.com/maps/search/?api=1&amp;query=Pimpri+Chinchwad%2C+Maharashtra" class="text-link mt-1 inline-block text-sm text-olive-soft" target="_blank" rel="noopener noreferrer">Pimpri Chinchwad, Maharashtra</a>
+                </div>
+              </li>
+              <li class="feature-row flex gap-4">
+                <span class="icon-badge"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+                <div>
+                  <h3 class="font-display text-xl font-semibold leading-tight">Phone</h3>
+                  <a href="tel:+918830532500" class="text-link mt-1 inline-block text-sm text-olive-soft">+91 88305 32500</a>
+                </div>
+              </li>
+              <li class="feature-row flex gap-4">
+                <span class="icon-badge"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                <div>
+                  <h3 class="font-display text-xl font-semibold leading-tight">Email</h3>
+                  <a href="mailto:shelarjayshree635@gmail.com" class="text-link mt-1 inline-block break-all text-sm text-olive-soft">shelarjayshree635@gmail.com</a>
+                </div>
+              </li>
+              <li class="feature-row flex gap-4">
+                <span class="icon-badge"><i class="fa-regular fa-clock" aria-hidden="true"></i></span>
+                <div>
+                  <h3 class="font-display text-xl font-semibold leading-tight">Opening Hours</h3>
+                  <p class="mt-1 text-sm text-olive-soft">Monday to Sunday: 10:00 AM to 8:00 PM</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="mt-5 flex items-center gap-3 text-olive">
+              <a href="https://wa.me/918830532500" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.facebook.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1">
+            <div class="map-frame">
+              <iframe
+                title="Map showing Pimpri Chinchwad, Maharashtra"
+                src="https://maps.google.com/maps?q=Pimpri%20Chinchwad%2C%20Maharashtra&amp;z=13&amp;output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer is loaded from components/footer.html by js/components.js -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Gallery lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+    <button type="button" class="lightbox-btn lightbox-close" data-lightbox-close aria-label="Close image viewer">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <button type="button" class="lightbox-btn lightbox-prev" data-lightbox-prev aria-label="Previous image">
+      <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+    </button>
+    <button type="button" class="lightbox-btn lightbox-next" data-lightbox-next aria-label="Next image">
+      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+    </button>
+    <figure class="lightbox-figure">
+      <img id="lightbox-image" alt="">
+      <figcaption id="lightbox-caption" class="lightbox-caption"></figcaption>
+    </figure>
+  </div>
+
+</body>
+</html>

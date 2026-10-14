@@ -1,0 +1,95 @@
+<header id="site-header" class="site-header fixed inset-x-0 top-0 z-50">
+
+  <!-- Contact bar (desktop only; collapses once the page is scrolled) -->
+  <div class="topbar hidden lg:block">
+    <div class="wrap flex h-9 items-center justify-between text-xs">
+      <ul class="flex items-center gap-6">
+        <li>
+          <a href="tel:+918830532500" class="topbar-link">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>+91 88305 32500
+          </a>
+        </li>
+        <li>
+          <a href="mailto:shelarjayshree635@gmail.com" class="topbar-link">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>shelarjayshree635@gmail.com
+          </a>
+        </li>
+        <li class="topbar-link">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>Pimpri Chinchwad, Maharashtra
+        </li>
+      </ul>
+      <div class="flex items-center gap-4">
+        <a href="https://www.instagram.com/" class="topbar-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.facebook.com/" class="topbar-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="https://wa.me/918830532500" class="topbar-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main bar -->
+  <div class="header-main">
+    <div class="wrap header-bar flex items-center justify-between">
+      <a href="#home" class="wordmark" aria-label="Serenity Spa, back to top">
+        <span class="logo-mark"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span>
+        <span class="flex flex-col leading-none">
+          <span class="font-display text-[1.7rem] font-semibold tracking-wide">Serenity</span>
+          <span class="mt-1 text-[0.58rem] font-bold uppercase tracking-[0.42em]">Wellness &amp; Spa</span>
+        </span>
+      </a>
+
+      <nav class="hidden lg:block" aria-label="Primary">
+        <ul class="flex items-center gap-7">
+          <li><a href="#home" class="nav-link" data-nav-link>Home</a></li>
+          <li><a href="#about" class="nav-link" data-nav-link>About</a></li>
+          <li><a href="#treatments" class="nav-link" data-nav-link>Treatments</a></li>
+          <li><a href="#experience" class="nav-link" data-nav-link>Experience</a></li>
+          <li><a href="#packages" class="nav-link" data-nav-link>Packages</a></li>
+          <li><a href="#gallery" class="nav-link" data-nav-link>Gallery</a></li>
+          <li><a href="#contact" class="nav-link" data-nav-link>Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#booking" class="btn btn-gold btn-sm hidden lg:inline-flex">
+        Enquire Now <i class="fa-solid fa-arrow-right btn-arrow" aria-hidden="true"></i>
+      </a>
+
+      <button
+        id="mobile-menu-toggle"
+        type="button"
+        class="menu-toggle lg:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Open navigation menu"
+      >
+        <i class="fa-solid fa-bars" data-icon-open aria-hidden="true"></i>
+        <i class="fa-solid fa-xmark hidden" data-icon-close aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="mobile-menu hidden lg:hidden">
+    <nav class="wrap py-3" aria-label="Mobile">
+      <ul>
+        <li><a href="#home" class="nav-link" data-nav-link>Home</a></li>
+        <li><a href="#about" class="nav-link" data-nav-link>About</a></li>
+        <li><a href="#treatments" class="nav-link" data-nav-link>Treatments</a></li>
+        <li><a href="#experience" class="nav-link" data-nav-link>Experience</a></li>
+        <li><a href="#packages" class="nav-link" data-nav-link>Packages</a></li>
+        <li><a href="#gallery" class="nav-link" data-nav-link>Gallery</a></li>
+        <li><a href="#contact" class="nav-link" data-nav-link>Contact</a></li>
+      </ul>
+      <a href="#booking" class="btn btn-olive btn-block mt-4">Enquire Now</a>
+      <div class="mt-4 grid grid-cols-2 gap-3">
+        <a href="tel:+918830532500" class="btn btn-outline-olive btn-sm"><i class="fa-solid fa-phone" aria-hidden="true"></i>Call</a>
+        <a href="https://wa.me/918830532500" class="btn btn-outline-olive btn-sm" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>WhatsApp</a>
+      </div>
+    </nav>
+  </div>
+</header>
